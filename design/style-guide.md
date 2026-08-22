@@ -39,10 +39,10 @@ The designs were created to the following widths:
 
 ## Mobile Design
 
-![Mobile Design](design/mobile-design.jpg)
+![Mobile Design](mobile-design.jpg)
 
 ## Desktop Design
 
-![Desktop Design](design/desktop-design.jpg)
+![Desktop Design](desktop-design.jpg)
 
 > 💎 [Upgrade to Pro](https://www.frontendmentor.io/pro?ref=style-guide) for design file access to see all design details and get hands-on experience using a professional workflow with tools like Figma. The design file for this challenge also includes a design system and tablet layout to help you build a more accurate solution faster.
