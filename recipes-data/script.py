@@ -38,11 +38,15 @@ class Recipe:
 
 def main() -> None:
     for path in (p for p in SCRIPT_DIR.iterdir() if p.is_file() and p.suffix == ".md"):
-        path = Path(SCRIPT_DIR) / "lasagna.md"
-        recipe = parse_recipe(path)
-        pprint(recipe)
+        print(f"{path.name:<40}", end=" ")
+        try:
+            recipe = parse_recipe(path)
+        except ValueError as e:
+            print(f"❌ failed — {e}")
+        else:
+            print("✅ done")
+
         render_recipe(recipe, RECIPES_DIR / f"{path.stem}.html")
-        exit()
 
 
 def parse_recipe(md_path: Path) -> Recipe:
@@ -50,7 +54,6 @@ def parse_recipe(md_path: Path) -> Recipe:
         md_text = f.read()
     html = markdown.markdown(md_text, extensions=["tables"])
     soup = BeautifulSoup(html, "lxml")
-    print(soup.decode_contents())
 
     try:
         title = soup.find("h1").text
