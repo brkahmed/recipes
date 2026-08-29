@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../assets/favicon/favicon-16x16.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Recipe page</title>
+
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body class="container">
+    <main class="main-container">
+      <article class="recipe">
+        <img src="{{ recipe.image }}" alt="{{ recipe.image_alt }}" />
+        <div class="recipe-content">
+          <h1 class="recipe-title">{{ recipe.title }}</h1>
+          <section>
+            <p>{{ recipe.description }}</p>
+          </section>
+          <section class="recipe-preparation">
+            <h2 class="recipe-heading">Preparation time</h2>
+            <ul class="recipe-list">
+              {% for time in recipe.preparation_time %}
+              <li>{{ time }}</li>
+              {% endfor %}
+            </ul>
+          </section>
+          <section>
+            <h2 class="recipe-heading">Ingredients</h2>
+            <ul class="recipe-list">
+              {% for ingredient in recipe.ingredients %}
+              <li>{{ ingredient }}</li>
+              {% endfor %}
+            </ul>
+          </section>
+          <hr />
+          <section>
+            <h2 class="recipe-heading">Steps</h2>
+            <ol class="recipe-list">
+              {% for step in recipe.steps %}
+              <li>{{ step }}</li>
+              {% endfor %}
+            </ol>
+          </section>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
