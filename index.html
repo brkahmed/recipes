@@ -3,17 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="A collection of delicious recipes." />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Odin Recipes</title>
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon/favicon-16x16.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Recipe page</title>
+
+    <link rel="stylesheet" href="../styles.css" />
   </head>
-  <body>
-    <main>
-      <h1>Odin Recipes</h1>
+  <body class="container">
+    <header class="header-container">
+      <a href="../index.html" title="homepage"
+        ><img
+          src="../assets/logo-500x500.png"
+          alt="Website Logo"
+          width="500"
+          height="500"
+      /></a>
+      <h1><a href="../index.html">Recipes</a></h1>
+    </header>
+    <main class="main-container">
       <ul>
         <li><a href="recipes/lasagna.html">Lasagna</a></li>
-        <li><a href="recipes/spaghetti.html">Spaghetti</a></li>
+        <li><a href="recipes/omelette.html">Omelette</a></li>
         <li><a href="recipes/penne.html">Penne</a></li>
+        <li><a href="recipes/spaghetti.html">Spaghetti</a></li>
       </ul>
     </main>
   </body>
