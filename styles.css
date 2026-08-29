@@ -71,14 +71,12 @@ hr {
 }
 
 .main-container {
-  max-width: fit-content;
+  max-width: 580px;
   margin: 0 auto;
   background-color: var(--white);
 }
 
 .recipe {
-  max-width: 580px;
-  margin: 0 auto;
   color: var(--stone-600);
 }
 
