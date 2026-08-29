@@ -43,14 +43,13 @@ hr {
 }
 
 .header-container {
-  box-sizing: border-box;
   background-color: var(--white);
   max-width: 580px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px;
+  padding: 8px 0;
 }
 
 .header-container img {
@@ -73,6 +72,7 @@ hr {
 .main-container {
   max-width: 580px;
   margin: 0 auto;
+  padding: 1px 0;
   background-color: var(--white);
 }
 
@@ -81,7 +81,7 @@ hr {
 }
 
 .recipe-content {
-  padding: 0 24px 1px;
+  padding: 0 24px;
 }
 .recipe-title {
   font-family: "Young Serif", serif;
