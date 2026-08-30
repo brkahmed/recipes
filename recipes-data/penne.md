@@ -1,4 +1,4 @@
-# Penne
+# Penne Recipe
 
 ![Penne](../assets/images/penne-2048x1365.jpg)
 

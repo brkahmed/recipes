@@ -1,4 +1,4 @@
-# Lasagna
+# Lasagna Recipe
 
 ![Lasagna](../assets/images/lasagna-1500x1125.jpg)
 

@@ -1,4 +1,4 @@
-# Spaghetti
+# Spaghetti Recipe
 
 ![Spaghetti](../assets/images/spaghetti-2048x1310.jpg)
 
