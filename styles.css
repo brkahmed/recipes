@@ -97,6 +97,7 @@ hr {
   font-weight: 500;
 }
 
+.recipe header,
 .recipe section {
   margin-bottom: 24px;
 }

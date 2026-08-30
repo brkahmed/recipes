@@ -42,22 +42,29 @@
     </header>
     <main class="main-container">
       <article class="recipe">
-        <img src="{{ recipe.image }}" alt="{{ recipe.image_alt }}" />
-        <div class="recipe-content">
-          <h1 class="recipe-title">{{ recipe.title }}</h1>
-          <section>
+        <header>
+          <img src="{{ recipe.image }}" alt="{{ recipe.image_alt }}" />
+          <div class="recipe-content">
+            <h1 class="recipe-title">{{ recipe.title }}</h1>
             <p>{{ recipe.description }}</p>
-          </section>
-          <section class="recipe-preparation">
-            <h2 class="recipe-heading">Preparation time</h2>
+          </div>
+        </header>
+        <div class="recipe-content">
+          <section
+            class="recipe-preparation"
+            aria-labelledby="preparation-time-heading"
+          >
+            <h2 id="preparation-time-heading" class="recipe-heading">
+              Preparation time
+            </h2>
             <ul class="recipe-list">
               {% for time in recipe.preparation_time %}
               <li>{{ time }}</li>
               {% endfor %}
             </ul>
           </section>
-          <section>
-            <h2 class="recipe-heading">Ingredients</h2>
+          <section aria-labelledby="ingredients">
+            <h2 id="ingredients-heading" class="recipe-heading">Ingredients</h2>
             <ul class="recipe-list">
               {% for ingredient in recipe.ingredients %}
               <li>{{ ingredient }}</li>
@@ -65,8 +72,8 @@
             </ul>
           </section>
           <hr />
-          <section>
-            <h2 class="recipe-heading">Steps</h2>
+          <section aria-labelledby="steps-heading">
+            <h2 id="steps-heading" class="recipe-heading">Steps</h2>
             <ol class="recipe-list">
               {% for step in recipe.steps %}
               <li>{{ step }}</li>

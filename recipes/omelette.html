@@ -42,14 +42,21 @@
     </header>
     <main class="main-container">
       <article class="recipe">
-        <img src="../assets/images/omelette-1312x600.jpeg" alt="Omelette" />
-        <div class="recipe-content">
-          <h1 class="recipe-title">Simple Omelette Recipe</h1>
-          <section>
+        <header>
+          <img src="../assets/images/omelette-1312x600.jpeg" alt="Omelette" />
+          <div class="recipe-content">
+            <h1 class="recipe-title">Simple Omelette Recipe</h1>
             <p>An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked to perfection, optionally filled with your choice of cheese, vegetables, or meats.</p>
-          </section>
-          <section class="recipe-preparation">
-            <h2 class="recipe-heading">Preparation time</h2>
+          </div>
+        </header>
+        <div class="recipe-content">
+          <section
+            class="recipe-preparation"
+            aria-labelledby="preparation-time-heading"
+          >
+            <h2 id="preparation-time-heading" class="recipe-heading">
+              Preparation time
+            </h2>
             <ul class="recipe-list">
               
               <li><strong>Total:</strong> Approximately 10 minutes</li>
@@ -60,8 +67,8 @@
               
             </ul>
           </section>
-          <section>
-            <h2 class="recipe-heading">Ingredients</h2>
+          <section aria-labelledby="ingredients">
+            <h2 id="ingredients-heading" class="recipe-heading">Ingredients</h2>
             <ul class="recipe-list">
               
               <li>2-3 large eggs</li>
@@ -77,8 +84,8 @@
             </ul>
           </section>
           <hr />
-          <section>
-            <h2 class="recipe-heading">Steps</h2>
+          <section aria-labelledby="steps-heading">
+            <h2 id="steps-heading" class="recipe-heading">Steps</h2>
             <ol class="recipe-list">
               
               <li><strong>Beat the eggs:</strong> In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. You can add a tablespoon of water or milk for a fluffier texture.</li>

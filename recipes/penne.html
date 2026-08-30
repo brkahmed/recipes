@@ -42,14 +42,21 @@
     </header>
     <main class="main-container">
       <article class="recipe">
-        <img src="../assets/images/penne-2048x1365.jpg" alt="Penne" />
-        <div class="recipe-content">
-          <h1 class="recipe-title">Penne Recipe</h1>
-          <section>
+        <header>
+          <img src="../assets/images/penne-2048x1365.jpg" alt="Penne" />
+          <div class="recipe-content">
+            <h1 class="recipe-title">Penne Recipe</h1>
             <p>Penne Arrabbiata is a vibrant, fiery staple of Roman cuisine. The name "arrabbiata" literally translates to "angry" in Italian, a playful nod to the punch of heat delivered by the crushed red pepper flakes infused into the sauce.</p>
-          </section>
-          <section class="recipe-preparation">
-            <h2 class="recipe-heading">Preparation time</h2>
+          </div>
+        </header>
+        <div class="recipe-content">
+          <section
+            class="recipe-preparation"
+            aria-labelledby="preparation-time-heading"
+          >
+            <h2 id="preparation-time-heading" class="recipe-heading">
+              Preparation time
+            </h2>
             <ul class="recipe-list">
               
               <li><strong>Total:</strong> Approximately 30 minutes</li>
@@ -60,8 +67,8 @@
               
             </ul>
           </section>
-          <section>
-            <h2 class="recipe-heading">Ingredients</h2>
+          <section aria-labelledby="ingredients">
+            <h2 id="ingredients-heading" class="recipe-heading">Ingredients</h2>
             <ul class="recipe-list">
               
               <li>1 lb (450g) penne pasta, preferably penne rigate with ridges</li>
@@ -83,8 +90,8 @@
             </ul>
           </section>
           <hr />
-          <section>
-            <h2 class="recipe-heading">Steps</h2>
+          <section aria-labelledby="steps-heading">
+            <h2 id="steps-heading" class="recipe-heading">Steps</h2>
             <ol class="recipe-list">
               
               <li>

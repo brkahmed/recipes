@@ -42,14 +42,21 @@
     </header>
     <main class="main-container">
       <article class="recipe">
-        <img src="../assets/images/lasagna-1500x1125.jpg" alt="Lasagna" />
-        <div class="recipe-content">
-          <h1 class="recipe-title">Lasagna Recipe</h1>
-          <section>
+        <header>
+          <img src="../assets/images/lasagna-1500x1125.jpg" alt="Lasagna" />
+          <div class="recipe-content">
+            <h1 class="recipe-title">Lasagna Recipe</h1>
             <p>This classic homemade lasagna features rich, savory layers of seasoned ground beef, vibrant marinara sauce, and a creamy three-cheese blend. It is the ultimate comfort food, combining tender pasta sheets with a golden, bubbly topping of melted mozzarella and parmesan cheese.</p>
-          </section>
-          <section class="recipe-preparation">
-            <h2 class="recipe-heading">Preparation time</h2>
+          </div>
+        </header>
+        <div class="recipe-content">
+          <section
+            class="recipe-preparation"
+            aria-labelledby="preparation-time-heading"
+          >
+            <h2 id="preparation-time-heading" class="recipe-heading">
+              Preparation time
+            </h2>
             <ul class="recipe-list">
               
               <li><strong>Total:</strong> Approximately 1 hour 20 minutes</li>
@@ -60,8 +67,8 @@
               
             </ul>
           </section>
-          <section>
-            <h2 class="recipe-heading">Ingredients</h2>
+          <section aria-labelledby="ingredients">
+            <h2 id="ingredients-heading" class="recipe-heading">Ingredients</h2>
             <ul class="recipe-list">
               
               <li>1 lb lean ground beef</li>
@@ -89,8 +96,8 @@
             </ul>
           </section>
           <hr />
-          <section>
-            <h2 class="recipe-heading">Steps</h2>
+          <section aria-labelledby="steps-heading">
+            <h2 id="steps-heading" class="recipe-heading">Steps</h2>
             <ol class="recipe-list">
               
               <li>
