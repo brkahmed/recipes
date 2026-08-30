@@ -4,7 +4,7 @@
 
 ## Description
 
-Penne Arrabbiata is a vibrant, fiery staple of Roman cuisine. The name "arrabbiata" literally translates to "angry" in Italian, a playful nod to the punch of heat delivered by the crushed red pepper flakes infused into the sauce.
+Penne Arrabbiata is a vibrant, fiery staple of Roman cuisine. The name arrabbiata literally translates to angry in Italian, a playful nod to the punch of heat delivered by the crushed red pepper flakes infused into the sauce.
 
 ## Preparation time
 
