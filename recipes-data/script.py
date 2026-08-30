@@ -10,6 +10,8 @@
 # ///
 from __future__ import annotations
 
+import os
+import subprocess
 from dataclasses import dataclass
 from pathlib import Path
 from pprint import pprint
@@ -50,11 +52,21 @@ def main() -> None:
         print(f"{path.name:<40}", end=" ")
         try:
             recipe = parse_recipe(path)
-        except ValueError as e:
+        except (ValueError, subprocess.CalledProcessError) as e:
             print(f"❌ failed — {e}")
-        else:
-            print("✅ done")
-            render_recipe(recipe, RECIPES_DIR / f"{path.stem}.html")
+            continue
+        html = RECIPES_DIR / f"{path.stem}.html"
+        render_recipe(recipe, html)
+
+        try:
+            format_html_file(html)
+        except subprocess.CalledProcessError as e:
+            print(f"\n❌ Prettier failed on {path.name}!")
+            print(f"Error Code: {e.returncode}")
+            print(f"Prettier Output: {e.stderr or e.stdout}")
+            raise e
+
+        print("✅ done")
 
 
 def parse_recipe(md_path: Path) -> Recipe:
@@ -117,6 +129,18 @@ def render_recipe(recipe: Recipe, path: Path) -> None:
     recipe_html = RECIPE_TEMPLATE.render(recipe=recipe)
     with open(path, mode="w") as f:
         f.write(recipe_html)
+
+
+def format_html_file(path: Path) -> None:
+    # Call Prettier CLI
+    # --write overwrites the files in place with the formatted code
+    subprocess.run(
+        ["npx", "prettier", "--write", str(path)],
+        capture_output=True,
+        text=True,
+        check=True,
+        shell=os.name == "nt",  # Windows requires shell=True for npx
+    )
 
 
 if __name__ == "__main__":
