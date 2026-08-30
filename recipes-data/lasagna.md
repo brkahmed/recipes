@@ -1,6 +1,6 @@
 # Lasagna Recipe
 
-![Lasagna](../assets/images/lasagna-1500x1125.jpg)
+![Lasagna](../assets/images/lasagna-720x540.jpg)
 
 ## Description
 

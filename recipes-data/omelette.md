@@ -1,6 +1,6 @@
 # Simple Omelette Recipe
 
-![Omelette](../assets/images/omelette-1312x600.jpeg)
+![Omelette](../assets/images/omelette-720x329.jpeg)
 
 ## Description
 

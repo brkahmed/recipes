@@ -8,6 +8,8 @@
 #     "markdown",
 # ]
 # ///
+from __future__ import annotations
+
 from dataclasses import dataclass
 from pathlib import Path
 from pprint import pprint
@@ -27,13 +29,20 @@ with open(SCRIPT_DIR / "template.html") as f:
 @dataclass
 class Recipe:
     title: str
-    image: str
-    image_alt: str
+    image: Image
     description: str
     preparation_time: list[str]
     ingredients: list[str]
     steps: list[str]
     nutrition: str
+
+
+@dataclass
+class Image:
+    src: str
+    alt: str
+    width: int
+    height: int
 
 
 def main() -> None:
@@ -45,8 +54,7 @@ def main() -> None:
             print(f"❌ failed — {e}")
         else:
             print("✅ done")
-
-        render_recipe(recipe, RECIPES_DIR / f"{path.stem}.html")
+            render_recipe(recipe, RECIPES_DIR / f"{path.stem}.html")
 
 
 def parse_recipe(md_path: Path) -> Recipe:
@@ -58,8 +66,17 @@ def parse_recipe(md_path: Path) -> Recipe:
     try:
         title = soup.find("h1").text
         img = soup.find("img")
-        image = img["src"]
-        image_alt = img.get("alt", "")
+        img_src = img["src"]
+        img_alt = img.get("alt", "")
+        img_width, img_height = (
+            int(s) for s in Path(img_src).stem.rpartition("-")[-1].split("x")
+        )
+        image = Image(
+            src=img_src,
+            alt=img_alt,
+            width=img_width,
+            height=img_height,
+        )
         description = soup.find(
             "h2", string="Description"
         ).next_sibling.next_sibling.text
@@ -88,7 +105,6 @@ def parse_recipe(md_path: Path) -> Recipe:
     return Recipe(
         title=title,
         image=image,
-        image_alt=image_alt,
         description=description,
         preparation_time=preparation_time,
         ingredients=ingredients,

@@ -60,7 +60,8 @@
     <main class="main-container">
       <article class="recipe">
         <header>
-          <img src="{{ recipe.image }}" alt="{{ recipe.image_alt }}" />
+          {% set img = recipe.image %}
+          <img src="{{ img.src }}" alt="{{ img.alt }}" width="{{ img.width }}" height="{{ img.height }}" />
           <div class="recipe-content">
             <h1 class="recipe-title">{{ recipe.title }}</h1>
             <p>{{ recipe.description }}</p>

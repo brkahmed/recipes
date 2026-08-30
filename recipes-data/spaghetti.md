@@ -1,6 +1,6 @@
 # Spaghetti Recipe
 
-![Spaghetti](../assets/images/spaghetti-2048x1310.jpg)
+![Spaghetti](../assets/images/spaghetti-720x461.jpg)
 
 ## Description
 

@@ -1,6 +1,6 @@
 # Penne Recipe
 
-![Penne](../assets/images/penne-2048x1365.jpg)
+![Penne](../assets/images/penne-720x480.jpg)
 
 ## Description
 
