@@ -60,13 +60,10 @@ hr {
   width: 64px;
 }
 
-.header-container a {
+.site-title {
   color: inherit;
   font-size: 48px;
   text-decoration: none;
-}
-
-.header-container h1 {
   margin: 0 24px;
   display: inline;
 
